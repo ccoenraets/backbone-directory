@@ -1,0 +1,14 @@
+.dropdown-menu {
+    max-height: 400px;
+    overflow-y: scroll;
+    width: 220px;
+}
+
+.list-item {
+    padding-top: 6px;
+    padding-left: 56px;
+}
+
+.no-reports {
+    display: none;
+}

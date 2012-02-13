@@ -1,0 +1,36 @@
+<p><img src="pics/<%= firstName %>_<%= lastName %>.jpg" width="160" height="160"/></p>
+<h1><%= firstName %> <%= lastName %></h1>
+<h3><%= title %></h3>
+
+<br>
+<div class="row">
+    <div class="span6">
+        <table class="table table-striped">
+            <tr>
+                <td><h6>Manager:</h6></td>
+                <td><i class="icon-user"></i> <a href='#employees/<%= managerId %>'><%= managerFirstName %> <%= managerLastName %></a></td>
+            </tr>
+            <tr>
+                <td><h6>Office Phone:</h6></td>
+                <td><i class="icon-home"></i> <%= officePhone %></td>
+            </tr>
+            <tr>
+                <td><h6>Cell Phone:</h6></td>
+                <td><i class="icon-headphones"></i> <%= cellPhone %></td>
+            </tr>
+            <tr>
+                <td><h6>Email:</h6></td>
+                <td><i class="icon-envelope"></i> <a href="mailto:<%= email %>"><%= email %></a></td>
+            </tr>
+            <tr>
+                <td><h6>Twitter:</h6></td>
+                <td><i class="icon-retweet"></i> <a href=""><%= twitterId %></a></td>
+            </tr>
+        </table>
+
+        <div class="alert alert-warning">
+          <h4 class="alert-heading">Warning</h4>
+          The phone numbers, email addresses, and Twitter handlers are fake.
+        </div>
+    </div>
+</div>
