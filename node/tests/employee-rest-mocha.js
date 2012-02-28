@@ -1,7 +1,7 @@
 process.env.NODE_ENV = 'test';
 var request = require('../node_modules/mers/test/support/http'),
     assert = require('assert'),
-    app = require('../server'),
+    app = require('../app'),
     should = require('should'),
     load = require('../load');
 
