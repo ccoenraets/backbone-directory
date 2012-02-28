@@ -1,5 +1,5 @@
 #Node API for backbone-directory.
-This is just an example of how to use [https://github.com/jspears/mers]Mers  to serve up a rest api. It seems
+This is just an example of how to use [Mers](https://github.com/jspears/mers)  to serve up a rest api. It seems
 compatible with the existing api it should require no changes to the javascript.
 
 ##Install
@@ -46,7 +46,7 @@ to run the tests.
 * tests/ -> mocha tests.
 
 ##Notes
-Is this mongoose-rest-express easier than just doing it by hand? Maybe not for this example
+Is Mers easier than just doing it by hand? Maybe not for this example
 though you do get free post/put/delete.  Most of what made this hard is maintaining API compatibilty
 with what was there.   90% of the setup code was for that, if you wanted to use the defaults it would just have been
 a single line
@@ -54,6 +54,7 @@ a single line
 ```javascript
 app.use('/api', require('mers')({uri:'your mongodb uri'})).rest()
 ```
+
 I wanted an example project of using Mers and wanted to make sure it was flexible enough to work.
 
 Great job, and many thanks to Christophe Coenraets for getting the bones done.   Might have to borrow it for another project.
