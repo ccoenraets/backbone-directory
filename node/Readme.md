@@ -6,9 +6,9 @@ compatible with the existing api it should require no changes to the javascript.
 I will assume you have mongo and nodejs installed. Its only been tested with node version 0.6.10 but not using
 anything fancy so I assume earlier versions may work.
 
-install nodejs //that's what google is for.
+install [nodejs](http://nodejs.org/#download) and [npm](http://npmjs.org/) //that's what google is for.
 
-install and start mongod  // install this somewhere does need to be here.
+install and start [mongod](http://www.mongodb.org/downloads)  // install this somewhere does need to be here.
 
     mongodb --dbpath dbpath
 
@@ -28,9 +28,7 @@ start the server
     node app.js
 
 
-see the awesomeness
-
-    open your browser at http://localhost:3000/ your golden.
+see the awesomeness at [http://localhost:3000/](http://localhost:3000/)
 
 to run the tests.
     
