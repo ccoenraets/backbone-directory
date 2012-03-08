@@ -18,9 +18,9 @@
         <% if (reportCount > 0) { %>
             <li><a href="#employees/<%= id %>/reports"><h3>View Direct Reports</h3><p><%= reportCount %></p></a></li>
         <% } %>
-        <li><a href="#"><h3>Call Office</h3><p><%= officePhone %></p></a></li>
-        <li><a href="#"><h3>Call Cell</h3><p><%= cellPhone %></p></a></li>
-        <li><a href="#"><h3>SMS</h3><p><%= cellPhone %></p></a></li>
+        <li><a href="tel:<%= officePhone %>"><h3>Call Office</h3><p><%= officePhone %></p></a></li>
+        <li><a href="tel:<%= cellPhone %>"><h3>Call Cell</h3><p><%= cellPhone %></p></a></li>
+        <li><a href="sms:<%= cellPhone %>"><h3>SMS</h3><p><%= cellPhone %></p></a></li>
         <li><a href="mailto:<%= email %>"><h3>Email</h3><p><%= email %></p></a></li>
     </ul>
 
