@@ -1,0 +1,27 @@
+<div data-role="header">
+    <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+    <h1>Employee Details</h1>
+    <a href="#" data-icon="search" class="search ui-btn-right">Search</a>
+</div>
+
+<div data-role="content">
+    <img src="pics/<%= firstName %>_<%= lastName %>100.jpg" class="employee-pic"/>
+    <div class="employee-details">
+        <h3><%= firstName %> <%= lastName %></h3>
+        <p><%= title %></p>
+    </div>
+
+    <ul data-role="listview" data-inset="true" class="action-list">
+        <% if (managerLastName) { %>
+        <li><a href="#employees/<%= managerId %>"><h3>View Manager</h3><p><%= managerFirstName %> <%= managerLastName %></p></a></li>
+        <% } %>
+        <% if (reportCount > 0) { %>
+            <li><a href="#employees/<%= id %>/reports"><h3>View Direct Reports</h3><p><%= reportCount %></p></a></li>
+        <% } %>
+        <li><a href="#"><h3>Call Office</h3><p><%= officePhone %></p></a></li>
+        <li><a href="#"><h3>Call Cell</h3><p><%= cellPhone %></p></a></li>
+        <li><a href="#"><h3>SMS</h3><p><%= cellPhone %></p></a></li>
+        <li><a href="mailto:<%= email %>"><h3>Email</h3><p><%= email %></p></a></li>
+    </ul>
+
+</div>

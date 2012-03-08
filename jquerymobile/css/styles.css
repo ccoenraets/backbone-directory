@@ -1,0 +1,14 @@
+.employee-pic {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 16px;
+}
+
+.employee-details p {
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+.action-list {
+	clear: both;
+}
