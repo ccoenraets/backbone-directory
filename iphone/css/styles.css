@@ -1,0 +1,383 @@
+/* Many of the styles below come from the app documented in this article http://cheeaun.com/blog/2012/03/how-i-built-hacker-news-mobile-web-app */
+
+html{
+	height: 100%;
+}
+body{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.header{
+	background: #b2bbca url(images/navbar-bg.png) repeat-x;
+	-webkit-background-size: 1px 44px;
+	-moz-background-size: 1px 44px;
+	-ms-background-size: 1px 44px;
+	-o-background-size: 1px 44px;
+	background-size: 1px 44px;
+	height: 44px;
+	line-height: 44px;
+	width: 100%;
+	color: #fff;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.header-button{
+	position: absolute;
+	top: 0;
+	padding: 7px 5px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	line-height: 1em;
+}
+
+.header-button button{
+	pointer-events: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	min-width: 50px;
+	height: 30px;
+	line-height: 25px;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 -1px rgba(0,0,0,.6);
+	padding: 0 4px;
+	margin: 0;
+	text-decoration: none;
+	border-width: 2px 5px;
+	-webkit-border-image: url(images/button.png) 4 10 4 10;
+	-moz-border-image: url(images/button.png) 4 10 4 10;
+	-ms-border-image: url(images/button.png) 4 10 4 10;
+	-o-border-image: url(images/button.png) 4 10 4 10;
+	background: transparent url(images/button-active.png) no-repeat;
+	-webkit-background-size: 0 0;
+	-moz-background-size: 0 0;
+	-ms-background-size: 0 0;
+	-o-background-size: 0 0;
+	background-size: 0 0;
+}
+
+.header-button-icon button{
+	min-width: 0;
+}
+
+.header-button-icon button img{
+	vertical-align: text-bottom;
+}
+
+.header-button.tappable-active button{
+	-webkit-border-image: url(images/button-active.png) 4 10 4 10;
+	-moz-border-image: url(images/button-active.png) 4 10 4 10;
+	-ms-border-image: url(images/button-active.png) 4 10 4 10;
+	-o-border-image: url(images/button-active.png) 4 10 4 10;
+}
+
+.header-back-button button{
+	padding: 0 4px 0 0;
+	border-width: 2px 4px 2px 13px;
+	-webkit-border-image: url(images/back-button.png) 4 8 4 26;
+	-moz-border-image: url(images/back-button.png) 4 8 4 26;
+	-ms-border-image: url(images/back-button.png) 4 8 4 26;
+	-o-border-image: url(images/back-button.png) 4 8 4 26;
+	background-image: url(images/back-button-active.png);
+}
+.header-back-button.tappable-active button{
+	-webkit-border-image: url(images/back-button-active.png) 4 8 4 26;
+	-moz-border-image: url(images/back-button-active.png) 4 8 4 26;
+	-ms-border-image: url(images/back-button-active.png) 4 8 4 26;
+	-o-border-image: url(images/back-button-active.png) 4 8 4 26;
+}
+
+.header-button-left{
+	left: 0;
+}
+
+.header-button-right{
+	right: 0;
+}
+
+.header h1{
+	padding: 0;
+	text-align: center;
+	font-size: 20px;
+	text-shadow: 0 -1px rgba(0,0,0,.4);
+	margin: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+}
+
+.scroll{
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	background-color: #e2e7ed;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+    position: absolute;
+    top: 80px;
+	bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.scroll.striped{
+	background-color: #cbd2d8;
+	background-image: -webkit-gradient(linear, left top, right top, from(#c5ccd4), color-stop(0.714, #c5ccd4), color-stop(0.714, #cbd2d8), to(#cbd2d8));
+	background-image: -webkit-linear-gradient(left, #c5ccd4, #c5ccd4 71.4%, #cbd2d8 71.5%, #cbd2d8);
+	background-image: -moz-linear-gradient(left, #c5ccd4, #c5ccd4 71.4%, #cbd2d8 71.5%, #cbd2d8);
+	background-image: -ms-linear-gradient(left, #c5ccd4, #c5ccd4 71.4%, #cbd2d8 71.5%, #cbd2d8);
+	background-image: -o-linear-gradient(left, #c5ccd4, #c5ccd4 71.4%, #cbd2d8 71.5%, #cbd2d8);
+	background-image: linear-gradient(left, #c5ccd4, #c5ccd4 71.4%, #cbd2d8 71.5%, #cbd2d8);
+	-webkit-background-size: 7px 1px;
+	-moz-background-size: 7px 1px;
+	-ms-background-size: 7px 1px;
+	-o-background-size: 7px 1px;
+	background-size: 7px 1px;
+}
+
+.tableview{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0;
+}
+.tableview li{
+	display: block;
+	border-top: 1px solid #e0e0e0;
+	padding: 10px;
+}
+
+.tableview-links li{
+	padding: 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	width: 100%;
+}
+
+.tableview-links li>a{
+	font-size: 15px;
+	line-height: 1.3em;
+	color: #000;
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	width: 100%;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#4286f5), to(#194fdb));
+	background-image: -webkit-linear-gradient(top, #4286f5, #194fdb);
+	background-image: -moz-linear-gradient(top, #4286f5, #194fdb);
+	background-image: -ms-linear-gradient(top, #4286f5, #194fdb);
+	background-image: -o-linear-gradient(top, #4286f5, #194fdb);
+	background-image: linear-gradient(top, #4286f5, #194fdb);
+	background-position: -10px 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: 10px 100%;
+	-moz-background-size: 10px 100%;
+	-ms-background-size: 10px 100%;
+	-o-background-size: 10px 100%;
+	background-size: 10px 100%;
+}
+
+.tableview-links li>a *{
+	pointer-events: none;
+}
+
+.tableview-links li>a .metadata{
+	display: block;
+	font-size: 13px;
+	color: #666d74;
+	line-height: 1.2em;
+}
+.tableview-links li>a.pad-right{
+	padding-right: 44px;
+}
+.tableview-links li>a.more-link{
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	line-height: 3em;
+	padding: 10px;
+	display: block;
+	color: #2960d9;
+	text-align: center;
+	font-weight: bold;
+}
+
+.tableview-links li>a.tappable-active{
+	color: #fff;
+	background-color: #4286f5;
+	background-repeat: repeat-x;
+}
+.tableview-links li>a.tappable-active *{
+	color: #fff;
+}
+.tableview-links li>a.detail-disclosure{
+	-webkit-touch-callout: none;
+	padding: 0;
+	width: 44px;
+	margin: 0 0 0 -44px;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	box-flex: 0;
+}
+.tableview-links li>a.detail-disclosure.tappable-active{
+	background: transparent none;
+}
+.tableview-links li>a.detail-disclosure span{
+	display: inline-block;
+	width: 29px;
+	height: 31px;
+	background: transparent url(images/detail-disclosure-button.png);
+	-webkit-background-size: 58px 31px;
+	-moz-background-size: 58px 31px;
+	-ms-background-size: 58px 31px;
+	-o-background-size: 58px 31px;
+	background-size: 58px 31px;
+}
+.tableview-links li>a.detail-disclosure.tappable-active span{
+	background-position: top right;
+}
+
+.link-text{
+	color: #385487;
+	font-weight: bold;
+}
+.inline-block{
+	display: inline-block;
+}
+
+
+#content {
+    position: absolute;
+    background: #ddd;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    -webkit-transform:translate3d(0,0,0);
+}
+
+.stage-center {
+    top: 0;
+    left: 0;
+}
+
+.stage-left {
+    left: -100%;
+}
+
+.stage-right {
+    left: 100%;
+}
+
+.transition {
+    -moz-transition-duration: .375s;
+    -webkit-transition-duration: .375s;
+    -o-transition-duration: .375s;
+}
+
+.employee-summary header{
+	padding: 10px 8px;
+	text-shadow: 0 1px rgba(255,255,255,.85);
+}
+.employee-summary header h1,
+.employee-summary header p{
+	margin: 0;
+	padding: 0;
+}
+.employee-summary header h1 a{
+	display: block;
+}
+.employee-summary header h1 a .link-text{
+	font-size: 13px;
+}
+.employee-summary header .metadata{
+	font-size: 13px;
+	color: #666d74;
+}
+.employee-summary header h1{
+	font-size: 17px;
+	line-height: 1.2em;
+}
+.employee-summary header h1 a{
+	color: #000;
+	text-decoration: none;
+}
+.employee-summary header + .grouped-tableview{
+	margin-top: 0;
+}
+.employee-summary{
+	padding-bottom: 1px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,.12)));
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.12));
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.12));
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.12));
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.12));
+	background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.12));
+	-webkit-background-size: 1px 11px;
+	-moz-background-size: 1px 11px;
+	-ms-background-size: 1px 11px;
+	-o-background-size: 1px 11px;
+	background-size: 1px 11px;
+	background-repeat: repeat-x;
+	background-position: bottom;
+
+    height: 120px;
+}
+
+.employee-summary img {
+	float: left;
+	margin-right: 12px;
+}
+
+.action-item {
+    box-flex: 1;
+}
+
+.action-icon {
+    position: absolute;
+    right: 10px;
+	width: 28px;
+}
