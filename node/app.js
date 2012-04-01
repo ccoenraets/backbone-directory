@@ -6,7 +6,6 @@
 var express = require('express')
   , resource= require('express-resource')
   , employees = require('./employees') 
-  , path = require('path')
 
 var app = module.exports = express.createServer();
 
@@ -16,7 +15,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use("/web",express.static(path.normalize(__dirname + '/../web')));
+  app.use("/web",express.static(__dirname + '/../web'));
 });
 
 app.configure('development', function(){
