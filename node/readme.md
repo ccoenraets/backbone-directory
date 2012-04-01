@@ -8,8 +8,9 @@ This backend also serves the static client-side files needed for the sample, so 
 1. Create and populate the MySQL database, as described in main readme file.
 2. Start up the node.js-based application server
 
-	cd backbone-directory/node
-	node app.js
+   cd backbone-directory/node
+   npm install
+   node app.js
 	
 3. Navigate to [http://localhost:3000/](http://localhost:3000/)
 
