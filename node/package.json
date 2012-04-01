@@ -1,0 +1,11 @@
+{
+    "name": "node-directory-example"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.5"
+    , "jade": ">= 0.0.1"
+    , "express-resource": "0.2.x"
+    , "sequelize": "1.3.7"
+  }
+}
