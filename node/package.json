@@ -1,7 +1,7 @@
 {
     "name": "node-directory-example"
   , "version": "0.0.1"
-  , "private": true
+  , "private": false
   , "dependencies": {
       "express": "2.5.5"
     , "jade": ">= 0.0.1"
