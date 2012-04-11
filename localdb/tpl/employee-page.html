@@ -1,0 +1,83 @@
+<div class="header">
+    <a href="#" class="header-button header-button-left header-back-button">
+        <button>Back</button>
+    </a>
+    <a href="#" class="header-button header-button-icon header-button-right search" id="view-home-refresh">
+        <button><img src="css/images/search-icon.png" alt="Refresh" width="16" height="16"></button>
+    </a>
+
+    <h1>Employee</h1>
+</div>
+
+<div class="scroll striped" style="top:44px;">
+    <div class="employee-summary">
+        <header>
+            <img id="employeePic" src="pics/<%= firstName %>_<%= lastName %>.jpg" width="100"/>
+
+            <h1><%= firstName %> <%= lastName %></h1>
+            <span class="link-text"><%= title %></span><br/>
+            <span class="metadata"><%= city %></span>
+        </header>
+    </div>
+
+    <ul class="tableview tableview-links">
+        <% if (managerLastName) { %>
+        <li>
+            <a href="#employees/<%= managerId %>">
+                <div class="story">
+                    <b>View Manager</b><br/>
+                    <span class="metadata"><%= managerFirstName %> <%= managerLastName %></span>
+                </div>
+                <img src="css/images/manager.png" class="action-icon"/>
+            </a>
+        </li>
+        <% } %>
+        <% if (reportCount > 0) { %>
+        <li>
+            <a href="#employees/<%= id %>/reports">
+                <div class="story">
+                    <b>View Direct Reports</b><br/>
+                    <span class="metadata"><%= reportCount %></span>
+                </div>
+                <img src="css/images/reports.png" class="action-icon"/>
+            </a>
+        </li>
+        <% } %>
+        <li>
+            <a href="tel:<%= officePhone %>">
+                <div class="story">
+                    <b>Call Office</b><br/>
+                    <span class="metadata"><%= officePhone %></span>
+                </div>
+                <img src="css/images/call.png" class="action-icon"/>
+            </a>
+        </li>
+        <li>
+            <a href="tel:<%= cellPhone %>">
+                <div class="story">
+                    <b>Call Cell</b><br/>
+                    <span class="metadata"><%= cellPhone %></span>
+                </div>
+                <img src="css/images/call.png" class="action-icon"/>
+            </a>
+        </li>
+        <li>
+            <a href="sms:<%= cellPhone %>">
+                <div class="story">
+                    <b>SMS</b><br/>
+                    <span class="metadata"><%= cellPhone %></span>
+                </div>
+                <img src="css/images/message.png" class="action-icon"/>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:<%= email %>">
+                <div class="story">
+                    <b>Email</b><br/>
+                    <span class="metadata"><%= email %></span>
+                </div>
+                <img src="css/images/mail.png" class="action-icon"/>
+            </a>
+        </li>
+    </ul>
+</div>
