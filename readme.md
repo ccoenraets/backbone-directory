@@ -4,7 +4,7 @@
 
 The application allows you to look up employees by name, view the details of an employee, and navigate up and down the Org Chart by clicking the employee’s manager or any of his/her direct reports.
 
-There are three versions of the application available in this repository:
+There are four versions of the application available in this repository:
 
 1. Backbone.js + Twitter Bootstrap (located in the [/web](http://twitter.github.com/bootstrap/) directory). 
 	- Read more about this version [here](http://coenraets.org/blog/2012/02/sample-app-with-backbone-js-and-twitter-bootstrap/)
@@ -15,8 +15,11 @@ There are three versions of the application available in this repository:
 3. Backbone.js + native-looking iPhone skins (located in the [/iphone](https://github.com/ccoenraets/backbone-directory/tree/master/iphone) directory).
 	- Read more about this version [here](http://coenraets.org/blog/2012/03/crafting-native-looking-ios-apps-with-html-backbone-js-and-phonegap/)
 	- Try it [here](http://coenraets.org/backbone/directory/iphone/)
+4. Backbone.js + native-looking iPhone skins and a local database implementation (located in the [/iphone](https://github.com/ccoenraets/backbone-directory/tree/master/localdb) directory).
+	- Read more about this version [here](http://coenraets.org/blog/2012/04/building-mobile-apps-with-html-and-a-local-database/)
+	- Try it [here](http://coenraets.org/backbone/directory/localdb/)
 
-The Twitter Bootstrap and jQuery Mobile versions use JSON services. Instructions to set up these services are provided below. The "native-looking iPhone" version uses sample in-memory data and doesn't have any dependency on external services. 
+The Twitter Bootstrap and jQuery Mobile versions use JSON services. Instructions to set up these services are provided below. The "native-looking iPhone" versions use sample in-memory data and don't have any dependency on external services.
 
 ## Set Up: ##
 
