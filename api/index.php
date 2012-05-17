@@ -7,8 +7,8 @@ $app = new Slim();
 $app->get('/employees', 'getEmployees');
 $app->get('/employees/:id',	'getEmployee');
 $app->get('/employees/:id/reports',	'getReports');
-//$app->get('/employees/search/:query', 'findByName');
-//$app->get('/employees/modifiedsince/:timestamp', 'findByModifiedDate');
+$app->get('/employees/search/:query', 'getEmployeesByName');
+$app->get('/employees/modifiedsince/:timestamp', 'findByModifiedDate');
 
 $app->run();
 
