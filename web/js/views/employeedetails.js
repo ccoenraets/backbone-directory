@@ -1,14 +1,14 @@
-window.EmployeeFullView = Backbone.View.extend({
+window.EmployeeView = Backbone.View.extend({
 
     tagName:"div", // Not required since 'div' is the default if no el or tagName specified
 
     initialize:function () {
-        this.template = _.template(tpl.get('employee-full'));
+//        this.template = templates['Employee'];
     },
 
-    render:function (eventName) {
+    render: function () {
         $(this.el).html(this.template(this.model.toJSON()));
-        $('#details', this.el).html(new EmployeeView({model:this.model}).render().el);
+        $('#details', this.el).html(new EmployeeSummaryView({model:this.model}).render().el);
         this.model.reports.fetch({
             success:function (data) {
                 if (data.length == 0)
@@ -20,17 +20,16 @@ window.EmployeeFullView = Backbone.View.extend({
     }
 });
 
-
-window.EmployeeView = Backbone.View.extend({
+window.EmployeeSummaryView = Backbone.View.extend({
 
     tagName:"div", // Not required since 'div' is the default if no el or tagName specified
 
     initialize:function () {
-        this.template = _.template(tpl.get('employee-details'));
+//        this.template = templates['EmployeeSummary'];
         this.model.bind("change", this.render, this);
     },
 
-    render:function (eventName) {
+    render:function () {
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
     }

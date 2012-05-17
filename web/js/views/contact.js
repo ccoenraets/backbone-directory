@@ -2,10 +2,10 @@ window.ContactView = Backbone.View.extend({
 
     initialize:function () {
         console.log('Initializing Contact View');
-        this.template = _.template(tpl.get('contact'));
+//        this.template = templates['Contact'];
     },
 
-    render:function (eventName) {
+    render:function () {
         $(this.el).html(this.template());
         return this;
     }

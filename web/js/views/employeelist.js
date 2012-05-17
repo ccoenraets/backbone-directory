@@ -12,7 +12,7 @@ window.EmployeeListView = Backbone.View.extend({
         });
     },
 
-    render:function (eventName) {
+    render:function () {
         $(this.el).empty();
         _.each(this.model.models, function (employee) {
             $(this.el).append(new EmployeeListItemView({model:employee}).render().el);
@@ -26,12 +26,11 @@ window.EmployeeListItemView = Backbone.View.extend({
     tagName:"li",
 
     initialize:function () {
-        this.template = _.template(tpl.get('employee-list-item'));
         this.model.bind("change", this.render, this);
         this.model.bind("destroy", this.close, this);
     },
 
-    render:function (eventName) {
+    render:function () {
         $(this.el).html(this.template(this.model.toJSON()));
         return this;
     }

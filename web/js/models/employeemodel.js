@@ -11,12 +11,11 @@ window.Employee = Backbone.Model.extend({
 
 window.EmployeeCollection = Backbone.Collection.extend({
 
-    model:Employee,
+    model: Employee,
 
     url:"../api/employees",
 
     findByName:function (key) {
-        // TODO: Modify service to include firstName in search
         var url = (key == '') ? '../api/employees' : "../api/employees/search/" + key;
         console.log('findByName: ' + key);
         var self = this;

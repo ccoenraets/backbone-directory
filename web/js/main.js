@@ -1,12 +1,12 @@
-var AppRouter = Backbone.Router.extend({
+window.Router = Backbone.Router.extend({
 
-    routes:{
-        "":"home",
-        "contact":"contact",
-        "employees/:id":"employeeDetails"
+    routes: {
+        "": "home",
+        "contact": "contact",
+        "employees/:id": "employeeDetails"
     },
 
-    initialize:function () {
+    initialize: function () {
         this.headerView = new HeaderView();
         $('.header').html(this.headerView.render().el);
 
@@ -16,38 +16,42 @@ var AppRouter = Backbone.Router.extend({
         });
     },
 
-    home:function () {
+    home: function () {
         // Since the home view never changes, we instantiate it and render it only once
         if (!this.homeView) {
             this.homeView = new HomeView();
             this.homeView.render();
+        } else {
+            this.homeView.delegateEvents(); // delegate events when the view is recycled
         }
-        $('#content').html(this.homeView.el);
+        $("#content").html(this.homeView.el);
+        this.headerView.select('home-menu');
     },
 
-    contact:function () {
+    contact: function () {
         if (!this.contactView) {
             this.contactView = new ContactView();
             this.contactView.render();
         }
         $('#content').html(this.contactView.el);
+        this.headerView.select('contact-menu');
     },
 
-    employeeDetails:function (id) {
-        var employee = new Employee({id:id});
+    employeeDetails: function (id) {
+        var employee = new Employee({id: id});
         employee.fetch({
-            success:function (data) {
+            success: function (data) {
                 // Note that we could also 'recycle' the same instance of EmployeeFullView
                 // instead of creating new instances
-                $('#content').html(new EmployeeFullView({model:data}).render().el);
+                $('#content').html(new EmployeeView({model: data}).render().el);
             }
         });
     }
 
 });
 
-tpl.loadTemplates(['home', 'contact', 'header', 'employee-full', 'employee-details', 'employee-list-item'],
+templateLoader.load(["HomeView", "ContactView", "HeaderView", "EmployeeView", "EmployeeSummaryView", "EmployeeListItemView"],
     function () {
-        app = new AppRouter();
+        app = new Router();
         Backbone.history.start();
     });

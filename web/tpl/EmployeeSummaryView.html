@@ -6,10 +6,17 @@
 <div class="row">
     <div class="span6">
         <table class="table table-striped">
+            <%
+            if (managerId>0)
+            {
+            %>
             <tr>
                 <td><h6>Manager:</h6></td>
                 <td><i class="icon-user"></i> <a href='#employees/<%= managerId %>'><%= managerFirstName %> <%= managerLastName %></a></td>
             </tr>
+            <%
+            }
+            %>
             <tr>
                 <td><h6>Office Phone:</h6></td>
                 <td><i class="icon-home"></i> <%= officePhone %></td>
