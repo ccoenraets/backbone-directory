@@ -1,3 +1,8 @@
+## Update ##
+
+This directory is no longer maintained. A new and improved version of the application is available in [this repository] (https://github.com/ccoenraets/directory-backbone-bootstrap)
+
+
 # Backbone.js Employee Directory #
 
 "Backbone Directory" is a simple Employee Directory application built with [Backbone.js](http://documentcloud.github.com/backbone/). 
