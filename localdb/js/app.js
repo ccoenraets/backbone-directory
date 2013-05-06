@@ -441,5 +441,6 @@ employeeDAO.populate(function() {
         function() {
             directory.app = new directory.Router();
             Backbone.history.start();
+            $("input.search-key").focus().trigger("keyup");
         });
 });
