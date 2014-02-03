@@ -1,0 +1,20 @@
+{
+    "name": "backbone-directory-node"
+  , "version": "0.0.2"
+  , "private": false
+  , "dependencies": {
+      "express": "2.5.8"
+    , "mers":"latest"
+    , "csv":"latest"
+  }
+  , "devDependencies":{
+     "mocha":"latest",
+     "should":"latest"
+  },
+  "scripts":{
+          "test":"./node_modules/mocha/bin/mocha --reporter spec tests/*-mocha.js"
+  },
+  "author":"Justin Spears <speajus@gmail.com>",
+  "keywords":["framework", "json", "express", "mongoose", "backbone", "twitter","bootstrap", "rest", "restful"],
+  "repository":"git@github.com:jspears/backbone-directory"
+}
