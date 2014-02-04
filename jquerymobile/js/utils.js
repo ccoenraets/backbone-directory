@@ -21,7 +21,7 @@ tpl = {
                 } else {
                     callback();
                 }
-            });
+            }, "HTML");
         }
 
         loadTemplate(0);
